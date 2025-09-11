@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@keyframes warning-bounce {
+  0%, 100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  40% {
+    transform: rotateX(-45deg) rotateY(0deg);
+    transform: translateX(-45deg) translateY(0deg);
+  }
+   80% {
+    transform: rotateX(0deg) rotateY(-45deg);
+  }
+  
+}
+
+.animate-warning-bounce {
+  animation: warning-bounce 2s infinite linear;
+
+}
+@keyframes shrink-width {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
