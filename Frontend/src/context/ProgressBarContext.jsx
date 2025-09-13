@@ -1,6 +1,6 @@
 // src/context/ProgressBarContext.jsx
 import { createContext, useState, useContext, useCallback } from 'react';
-// import TopProgressBar from '../components/TopProgressBar';
+import TopProgressBar from '../components/TopProgressBar';
 
 const ProgressBarContext = createContext();
 
@@ -17,7 +17,7 @@ export const ProgressBarProvider = ({ children }) => {
 
     return (
         <ProgressBarContext.Provider value={{ start, finish, isActive }}>
-           
+            <TopProgressBar isActive={isActive} />
             {children}
         </ProgressBarContext.Provider>
     );

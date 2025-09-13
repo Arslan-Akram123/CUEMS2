@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiUsers, FiCalendar, FiBook ,FiBookmark, FiMessageCircle, FiGrid, FiEye,FiAward  } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import {useProgressBar} from '../../context/ProgressBarContext';
-import TopProgressBar from '../../components/TopProgressBar';
+// import TopProgressBar from '../../components/TopProgressBar';
 // Helper component for the statistic cards
 const StatCard = ({ icon, title, value, color }) => {
     const colorClasses = {
@@ -31,7 +31,7 @@ const StatCard = ({ icon, title, value, color }) => {
 
 
 const DashboardPage = () => {
-    const {start,finish,isActive}=useProgressBar();
+    const {start,finish}=useProgressBar();
     const [newBookings, setNewBookings] = useState([]);
    const [dashboardData, setDashboardData] = useState([]);
     useEffect(() => {
@@ -51,7 +51,7 @@ const DashboardPage = () => {
 
     return (
         <>
-         <div className='w-full '> <TopProgressBar isActive={isActive} /></div>
+         {/* <div className='w-full '> <TopProgressBar isActive={isActive} /></div> */}
         <div>
            
             <h1 className="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>

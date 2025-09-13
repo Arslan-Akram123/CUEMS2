@@ -34,7 +34,7 @@ const TopProgressBar = ({ isActive }) => {
     if (progress === 0) return null;
 
     return (
-        <div className=" w-full h-1 z-50">
+        <div className=" w-full h-1 fixed top-0 left-0 z-50">
             <div
                 className="h-full bg-teal-500 shadow-lg shadow-teal-500/50"
                 style={{
