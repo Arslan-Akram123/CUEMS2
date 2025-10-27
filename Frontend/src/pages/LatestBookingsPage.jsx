@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 import UserLayout from '../components/UserLayout';
 import { FiSearch, FiCalendar } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
-
+import { useLoader } from '../context/LoaderContext';
+import Loader from '../components/Loader';
 
 const LatestBookingsPage = () => {
     const [mockLatestBookings, setMockLatestBookings] = useState([]);
-    
+    const {showLoader, hideLoader,isLoading} = useLoader();
         useEffect(()=>{
+            showLoader();
             fetch('http://localhost:8001/eventsbook/getAllUserBookings', { credentials: 'include' })
                 .then(res => res.json())
                 .then(data => setMockLatestBookings(data))
-                .catch(err => console.error(err));
+                .catch(err => console.error(err)).finally(() => hideLoader());
         },[])
     return (
         <UserLayout>
@@ -47,7 +49,7 @@ const LatestBookingsPage = () => {
                                             </tr>
                                         </thead>
                                         <tbody className="bg-white divide-y divide-gray-200 text-sm">
-                                            {filtered.map((booking) => (
+                                            {isLoading ? <tr><td colSpan="4" className='text-center py-4'><Loader /></td></tr>:filtered.map((booking) => (
                                                 <tr key={booking._id}>
                                                     <td className="py-4 px-4 font-semibold">
                                                         <Link to={`/events/${booking.event._id}`} className="text-teal-600 hover:underline">

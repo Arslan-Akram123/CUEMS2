@@ -78,6 +78,7 @@ const CheckoutForm = ({ booking, onSuccessfulPayment }) => {
       setProcessing(false);
     }finally{
       hideLoader();
+      setProcessing(false);
     }
   };
 
@@ -147,7 +148,7 @@ const CheckoutPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { booking } = location.state || {};
-
+  const {showToast} = useToast();
   if (!booking) {
     return (
       <UserLayout>

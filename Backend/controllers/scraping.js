@@ -490,7 +490,7 @@ const generalScraping = async () => {
 async function getsepcificEvents(req, res) {
   const { uniname } = req.params;
   const searchQuery = req.query.search;
-  console.log(`Fetching events for university: ${uniname} with search query: ${searchQuery}`);
+  // console.log(`Fetching events for university: ${uniname} with search query: ${searchQuery}`);
   try {
     // convert uniname to lowercase and schema name to lowercase
     const events = await ScrappedEventSchema.find({ name: uniname.toLowerCase() });

@@ -75,8 +75,7 @@ const MyBookingsPage = () => {
                                     .filter(b =>
                                         searchTerm === '' || b.event.name.toLowerCase().includes(searchTerm.toLowerCase())
                                     );
-                                return  isLoading ? <div className='flex justify-center py-4'><Loader /></div> :
-                                 filtered.length > 0 ? (
+                                return isLoading ?<div className='text-center py-4'><Loader /></div> : filtered.length > 0 ? (
                                     <table className="min-w-full">
                                         <thead className="bg-gray-50">
                                             <tr>
@@ -89,7 +88,7 @@ const MyBookingsPage = () => {
                                             </tr>
                                         </thead>
                                         <tbody className="bg-white divide-y divide-gray-200 text-sm">
-                                            {filtered.map((booking) => (
+                                            {isLoading ?<tr><td colSpan="6" className='text-center py-4'><Loader /></td></tr> :filtered.map((booking) => (
                                                 <tr key={booking._id}
                                                     className={highlightedId === booking._id ? 'bg-yellow-100 transition-colors' : ''}
                                                 >

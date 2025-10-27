@@ -3,7 +3,7 @@ const cron = require("node-cron");
 const {generalScraping}=require('./controllers/scraping');
 
 // Run every 5 minutes
-// cron.schedule("*/41 * * * *", () => {
+// cron.schedule("*/08 * * * *", () => {
 //     generalScraping();
 //     console.log("Hello World! The time is:", new Date().toLocaleTimeString());
 // });

@@ -14,7 +14,7 @@ import hybridInfo from '../assets/hybridInfo.JPG'; // And this one
 const LandingPage = () => {
     return (
         <UserLayout>
-            <div className="container mx-auto px-4 py-8 space-y-12">
+            <div className="container mx-auto px-4 py-0 space-y-4">
                 
                 {/* Section 1: Event and Announcement */}
             <div className="bg-yellow-400 rounded-lg p-8 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 shadow-lg">

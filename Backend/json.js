@@ -21,7 +21,7 @@ const allunverisities = [
   {
     name: "iub",
     url: "https://www.iub.edu.pk/events",
-    pagination: 29, 
+    pagination: 31, 
     type: "iub", 
     selectors: {
       container: ".single-item-wrapper",  

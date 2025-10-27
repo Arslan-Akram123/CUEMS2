@@ -165,12 +165,12 @@ const UserHeader = () => {
                 
                 {/* --- TOP ROW (Always visible) --- */}
                 {/* On small screens, it's a row with space-between. On medium screens, it becomes part of the larger flex layout. */}
-                <div className="flex items-center justify-between gap-3 h-20 md:h-auto md:py-4">
+                <div className="flex items-center justify-between gap-3 h-16 md:h-auto md:py-2 my-2 sm:my-0">
                     
                     {/* LOGO */}
                     <Link to="/home">
                     {/* <Logo /> */}
-                    <img src={`/uploads/siteSettings/${siteSetting.siteLogo}`} alt="Site Logo" className="h-24 w-44 object-contain" />
+                    <img src={`/uploads/siteSettings/${siteSetting.siteLogo}`} alt="Site Logo" className="h-16 w-44 object-contain" />
                     </Link>
 
                     {/* SEARCH BAR - This is the biggest change */}
