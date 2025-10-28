@@ -1,10 +1,15 @@
 // src/pages/AboutPage.jsx
 import UserLayout from '../components/UserLayout';
-
+import { Link } from 'react-router-dom';
 const AboutPage = () => {
     return (
         <UserLayout>
+           <div className="bg-teal-50 p-6 rounded-lg shadow-md mb-8 border-l-4 border-teal-500">
+                    <h1 className="text-3xl font-bold text-gray-800">About</h1>
+                    <p className="text-gray-500"><Link to="/home">Dashboard</Link> / About</p>
+                </div>
             <div className="container mx-auto px-4 py-16 bg-white">
+                
                 <div className="max-w-3xl mx-auto">
                     <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">About EventOps Hub</h1>
                     <div className="text-lg text-gray-700 space-y-6 leading-relaxed">

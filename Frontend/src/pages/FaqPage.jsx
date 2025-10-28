@@ -1,6 +1,6 @@
 // src/pages/FaqPage.jsx
 import UserLayout from '../components/UserLayout';
-
+import { Link } from 'react-router-dom';
 const FaqItem = ({ question, answer }) => (
     <div className="py-6 border-b border-gray-200">
         <h3 className="text-xl font-semibold text-gray-800">{question}</h3>
@@ -11,6 +11,10 @@ const FaqItem = ({ question, answer }) => (
 const FaqPage = () => {
     return (
         <UserLayout>
+             <div className="bg-teal-50 p-6 rounded-lg shadow-md mb-8 border-l-4 border-teal-500">
+                    <h1 className="text-3xl font-bold text-gray-800">Frequently Asked Questions</h1>
+                    <p className="text-gray-500"><Link to="/home">Dashboard</Link> / FAQs</p>
+                </div>
             <div className="bg-white">
                 <div className="container mx-auto px-4 py-16">
                     <div className="text-center mb-12">

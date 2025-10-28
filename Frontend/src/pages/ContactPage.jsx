@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useLoader } from '../context/LoaderContext';
 import { FaSpinner } from 'react-icons/fa';
 import {useToast} from '../context/ToastContext';
+import { Link } from 'react-router-dom';
 const ContactPage = () => {
     const {showLoader, hideLoader,isLoading} = useLoader();
       const {showToast} = useToast();
@@ -38,6 +39,10 @@ const ContactPage = () => {
 
     return (
         <UserLayout>
+              <div className="bg-teal-50 p-6 rounded-lg shadow-md mb-8 border-l-4 border-teal-500">
+                    <h1 className="text-3xl font-bold text-gray-800">Contact Us</h1>
+                    <p className="text-gray-500"><Link to="/home">Dashboard</Link> / Contact Us</p>
+                </div>
             <div className="container mx-auto px-4 py-16 ">
                 <div className="max-w-xl mx-auto text-center">
                     <h1 className="text-4xl font-bold text-gray-900">Contact Us</h1>

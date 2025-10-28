@@ -9,7 +9,7 @@ const bookEvent = async (req, res) => {
     // notes validation
     if (notes && notes.trim() !== '') {
         const trimmedNotes = notes.trim();
-        if (trimmedNotes.length < 3 || trimmedNotes.length > 50) {
+        if (trimmedNotes.length < 3 || trimmedNotes.length > 100) {
             return res.status(400).json({ error: 'Notes must be between 3 and 50 characters' });
         } else if (!/^[a-zA-Z0-9\s.,!?'"-]+$/.test(trimmedNotes)) {
             return res.status(400).json({ error: 'Notes can only contain letters, numbers, spaces, and basic punctuation (.,!?\'-)' });

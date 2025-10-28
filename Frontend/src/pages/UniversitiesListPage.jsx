@@ -62,7 +62,7 @@ const UniversitiesListPage = () => {
 
         {/* Right Main Content */}
         <main className="w-full md:w-3/4 space-y-6">
-          <div className="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 sm:gap-2 sm:justify-between sm:items-center">
+          <div className="bg-teal-50 p-6 rounded-lg shadow-md mb-4 border-l-4 border-teal-500 flex flex-col sm:flex-row gap-4 sm:gap-2 sm:justify-between sm:items-center">
              <div>
                 <h1 className="text-2xl font-bold text-gray-800">Explore Universities</h1>
                 <p className="text-gray-500"><Link to='/home'>Dashboard</Link> / Campuses</p>

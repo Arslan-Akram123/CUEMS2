@@ -42,7 +42,7 @@ const UniversityComparativeDataPage = () => {
     return (
         <UserLayout>
             <div className="container mx-auto px-4 py-8">
-                <div className="bg-teal-50 p-6 rounded-lg shadow-md mb-8">
+                <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-500 shadow-md mb-8">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                         {/* Title Section */}
                         <div>

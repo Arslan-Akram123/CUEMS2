@@ -18,7 +18,11 @@ const LatestBookingsPage = () => {
         },[])
     return (
         <UserLayout>
-            <div className="container mx-auto px-4 py-8">
+            <div className="bg-teal-50 p-6 rounded-lg shadow-md mb-4 border-l-4 border-teal-500">
+                    <h1 className="text-3xl font-bold text-gray-800">Recent Bookings</h1>
+                    <p className="text-gray-500"><Link to="/home">Dashboard</Link> / Recent-Bookings</p>
+                </div>
+            <div className="container mx-auto px-4 py-4">
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-2 justify-between items-center mb-4 border-b pb-4">
                         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 flex items-center gap-3">
